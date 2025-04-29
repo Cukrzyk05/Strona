@@ -2,32 +2,32 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rejestracja / Logowanie - VapeClub</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>VapeClub – Rejestracja / Logowanie</title>
   <style>
+    /* Reset i podstawowe */
     * {
       margin: 0; padding: 0; box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
     body {
-      background-color: #f5f5f5;
-      color: #333;
-      line-height: 1.6;
+      background-color: #f5f5f5; color: #333; line-height: 1.6;
     }
+
+    /* Nagłówek i nawigacja */
     header {
-      background-color: white;
-      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       padding: 15px 0;
     }
     .container {
       width: 90%; max-width: 1200px;
-      margin: 0 auto;
-      display: flex; justify-content: space-between; align-items: center;
+      margin: 0 auto; display: flex;
+      justify-content: space-between; align-items: center;
     }
     .logo {
       font-size: 24px; font-weight: bold;
       color: #2c3e50; text-decoration: none;
-      transition: color 0.3s;
+      transition: color .3s;
     }
     .logo:hover { color: #3498db; }
     nav ul {
@@ -35,78 +35,81 @@
     }
     nav ul li { margin-left: 20px; }
     nav ul li a {
-      text-decoration: none; color: #333; font-weight: 500;
-      padding: 5px 10px; border-radius: 4px; transition: all 0.3s;
+      color: #333; text-decoration: none; font-weight:500;
+      padding:5px 10px; border-radius:4px; transition:all .3s;
     }
     nav ul li a:hover {
-      background-color: #f0f0f0; color: #3498db;
+      background:#f0f0f0; color:#3498db;
     }
+
+    /* Wyszukiwarka i button */
     .search-container {
       display: flex; align-items: center;
     }
     .search-input {
-      padding: 8px 15px; border: 1px solid #ddd;
-      border-radius: 20px; outline: none; width: 200px;
-      transition: width 0.3s;
+      padding:8px 15px; border:1px solid #ddd;
+      border-radius:20px; outline:none; width:200px;
+      transition: width .3s;
     }
     .search-input:focus {
-      width: 250px; border-color: #3498db;
+      width:250px; border-color:#3498db;
     }
-    .search-button {
-      background: none; border: none; cursor: pointer;
-      padding: 8px; margin-left: -35px; color: #777;
-      transition: color 0.3s;
+    .search-button, .login-button {
+      background:none; border:none; cursor:pointer;
+      padding:8px 12px; margin-left:10px;
+      color:#333; border-radius:4px;
+      transition: background .3s;
     }
-    .search-button:hover { color: #333; }
+    .search-button:hover, .login-button:hover {
+      background:#f0f0f0; color:#3498db;
+    }
 
-    /* nowa sekcja z dwoma formularzami */
+    /* Główna zawartość auth */
+    .main-content {
+      padding:50px 0; text-align:center;
+    }
+    .page-header {
+      display:flex; align-items:center;
+      justify-content:center; gap:10px;
+      margin-bottom:20px;
+    }
+    .page-icon { width:32px; height:32px; }
+
+    /* Auth container */
     .auth-container {
-      display: flex;
-      justify-content: center;
-      gap: 40px;
-      padding: 60px 0;
-      flex-wrap: wrap;
+      display:flex; justify-content:center;
+      gap:40px; padding:60px 0; flex-wrap:wrap;
     }
     .auth-box {
-      background: white;
-      padding: 30px;
-      border-radius: 6px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-      width: 320px;
+      background:#fff; padding:30px;
+      border-radius:6px;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      width:320px;
     }
     .auth-box h2 {
-      margin-bottom: 20px;
-      color: #2c3e50;
-      text-align: center;
+      margin-bottom:20px; color:#2c3e50;
+      text-align:center;
     }
     .auth-box input {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 15px;
-      border: 1px solid #ddd;
-      border-radius: 4px;
+      width:100%; padding:10px;
+      margin-bottom:15px; border:1px solid #ddd;
+      border-radius:4px;
     }
     .auth-box button {
-      width: 100%;
-      padding: 10px;
-      background-color: #3498db;
-      border: none;
-      color: white;
-      border-radius: 4px;
-      cursor: pointer;
-      font-size: 16px;
+      width:100%; padding:10px;
+      background:#3498db; border:none;
+      color:#fff; border-radius:4px;
+      cursor:pointer; font-size:16px;
     }
     .auth-box button:hover {
-      background-color: #2980b9;
+      background:#2980b9;
     }
 
+    /* Stopka */
     footer {
-      background-color: #2c3e50;
-      color: white;
-      text-align: center;
-      padding: 20px 0;
-      position: fixed;
-      bottom: 0; width: 100%;
+      background: #2c3e50; color: #fff;
+      text-align: center; padding: 20px 0;
+      position: fixed; bottom: 0; width: 100%;
     }
   </style>
 </head>
@@ -124,35 +127,41 @@
           <li><a href="kontakt.html">Kontakt</a></li>
           <li><a href="forum.html">Forum</a></li>
           <li><a href="rejestracja.html">Rejestracja</a></li>
+          <li><a href="profil.html">Profil</a></li>
         </ul>
       </nav>
       <div class="search-container">
         <input type="text" class="search-input" placeholder="Wyszukaj...">
         <button class="search-button">🔍</button>
+        <button class="login-button">Logowanie / Rejestracja</button>
       </div>
     </div>
   </header>
 
-  <div class="auth-container">
-    <!-- kolumna logowania -->
-    <div class="auth-box">
-      <h2>Logowanie</h2>
-      <form id="loginForm">
-        <input type="email" placeholder="Email" required>
-        <input type="password" placeholder="Hasło" required>
-        <button type="submit">Zaloguj się</button>
-      </form>
+  <div class="main-content">
+    <div class="page-header">
+      <img src="icons/register.svg" class="page-icon" alt="Ikona rejestracji">
+      <h1>Logowanie / Rejestracja</h1>
     </div>
-    <!-- kolumna rejestracji -->
-    <div class="auth-box">
-      <h2>Rejestracja</h2>
-      <form id="registerForm">
-        <input type="text" placeholder="Nazwa użytkownika" required>
-        <input type="email" placeholder="Adres e-mail" required>
-        <input type="password" placeholder="Hasło" required>
-        <input type="password" placeholder="Potwierdź hasło" required>
-        <button type="submit">Zarejestruj się</button>
-      </form>
+    <div class="auth-container">
+      <div class="auth-box">
+        <h2>Logowanie</h2>
+        <form id="loginForm">
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Hasło" required>
+          <button type="submit">Zaloguj się</button>
+        </form>
+      </div>
+      <div class="auth-box">
+        <h2>Rejestracja</h2>
+        <form id="registerForm">
+          <input type="text" placeholder="Nazwa użytkownika" required>
+          <input type="email" placeholder="Adres e-mail" required>
+          <input type="password" placeholder="Hasło" required>
+          <input type="password" placeholder="Potwierdź hasło" required>
+          <button type="submit">Zarejestruj się</button>
+        </form>
+      </div>
     </div>
   </div>
 
@@ -161,24 +170,32 @@
   </footer>
 
   <script>
-    // obsługa wyszukiwarki
+    // Wyszukiwarka
     document.querySelector('.search-button').addEventListener('click', function() {
-      const term = document.querySelector('.search-input').value;
+      var term = document.querySelector('.search-input').value;
       if (term.trim()) alert('Wyszukiwanie: ' + term);
     });
     document.querySelector('.search-input').addEventListener('keypress', function(e) {
       if (e.key === 'Enter') document.querySelector('.search-button').click();
     });
 
-    // (opcjonalnie) obsługa submitów
-    document.getElementById('loginForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      alert('Zalogowano: ' + this.querySelector('input[type="email"]').value);
+    // Przycisk logowania
+    document.querySelector('.login-button').addEventListener('click', function() {
+      window.location.href = 'rejestracja.html';
     });
-    document.getElementById('registerForm').addEventListener('submit', function(e) {
+
+    // Obsługa formularzy
+    var lf = document.getElementById('loginForm');
+    if (lf) lf.addEventListener('submit', function(e) {
       e.preventDefault();
-      alert('Zarejestrowano: ' + this.querySelector('input[type="email"]').value);
+      alert('Zalogowano: ' + lf.querySelector('input[type="email"]').value);
+    });
+    var rf = document.getElementById('registerForm');
+    if (rf) rf.addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Zarejestrowano: ' + rf.querySelector('input[type="email"]').value);
     });
   </script>
+
 </body>
 </html>
