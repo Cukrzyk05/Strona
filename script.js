@@ -1,16 +1,29 @@
-// Logowanie i Rejestracja
-document.querySelector('.login-btn').addEventListener('click', function() {
-    alert('Formularz logowania');
+// Otwieranie i zamykanie modali
+const loginBtn = document.getElementById('loginBtn');
+const registerBtn = document.getElementById('registerBtn');
+const loginModal = document.getElementById('loginModal');
+const registerModal = document.getElementById('registerModal');
+const closeBtns = document.querySelectorAll('.close');
+
+loginBtn.addEventListener('click', () => {
+  loginModal.style.display = 'block';
 });
 
-document.querySelector('.register-btn').addEventListener('click', function() {
-    alert('Formularz rejestracji');
+registerBtn.addEventListener('click', () => {
+  registerModal.style.display = 'block';
 });
 
-// Zmiana motywu
-const themeToggleButton = document.getElementById('theme-toggle');
-themeToggleButton.addEventListener('click', function() {
-    document.body.classList.toggle('dark-mode');
-    // Zmieniamy ikonę przycisku
-    themeToggleButton.textContent = document.body.classList.contains('dark-mode') ? '🌞' : '🌙';
+closeBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    loginModal.style.display = 'none';
+    registerModal.style.display = 'none';
+  });
 });
+
+// Zamknięcie modala po kliknięciu poza jego obszar
+window.onclick = function(event) {
+  if (event.target === loginModal || event.target === registerModal) {
+    loginModal.style.display = 'none';
+    registerModal.style.display = 'none';
+  }
+};
