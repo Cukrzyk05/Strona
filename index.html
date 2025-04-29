@@ -1,14 +1,55 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ogłoszenia</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Możesz dodać własny plik CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VapeClub</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <div id="ogloszeniaContainer"></div> <!-- Tutaj będą wyświetlane ogłoszenia -->
+    <!-- Header / Navigation -->
+    <header>
+        <div class="logo">
+            <h1>VapeClub</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="/liquidy">Liquidy</a></li>
+                <li><a href="/uzywane">Używane</a></li>
+                <li><a href="/inne">Inne</a></li>
+                <li><a href="/forum">Forum</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <script type="module" src="main.js"></script> <!-- Wczytanie pliku JS -->
+    <!-- Main Section -->
+    <main>
+        <!-- Banner -->
+        <section class="banner">
+            <h2>Witaj na VapeClub</h2>
+            <p>Największa społeczność dla miłośników vape. Znajdź najlepsze produkty i ogłoszenia!</p>
+        </section>
+
+        <!-- Search Bar -->
+        <section class="search">
+            <input type="text" id="search-bar" placeholder="Szukaj ogłoszeń...">
+            <button id="search-btn">Szukaj</button>
+        </section>
+
+        <!-- Random Ad -->
+        <section class="random-ad" id="random-ad">
+            <h3>Losowe ogłoszenie</h3>
+            <div id="ad-content">
+                <!-- Treść ogłoszenia z Supabase będzie tutaj załadowana -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 VapeClub. Wszystkie prawa zastrzeżone.</p>
+    </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
