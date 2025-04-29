@@ -1,5 +1,3 @@
-main.js
-
 import { supabase } from './supabase.js';  // Upewnij się, że ścieżka do pliku jest poprawna
 
 // Funkcja do pobierania ogłoszeń
