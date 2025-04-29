@@ -1,61 +1,55 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VapeClub - Forum</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forum - VapeClub</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <header>
-        <div class="container">
-            <a href="index.html" class="logo">VapeClub</a>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Strona Główna</a></li>
+        <li><a href="sklep.html">Sklep</a></li>
+        <li><a href="aplikacja.html">Aplikacja</a></li>
+        <li><a href="premium.html">Premium</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="forum.html">Forum</a></li>
+      </ul>
+    </nav>
+  </header>
 
-            <nav>
-                <ul>
-                    <li><a href="forum.html">Forum</a></li>
-                    <li><a href="#">Sklep</a></li>
-                    <li><a href="aplikacja.html">Aplikacja</a></li>
-                    <li><a href="premium.html">Premium</a></li>
-                    <li><a href="kontakt.html">Kontakt</a></li>
-                </ul>
-            </nav>
-
-            <div class="auth-buttons">
-                <button id="loginBtn">Logowanie</button>
-                <a href="rejestracja.html">Rejestracja</a>
-            </div>
-
-            <div class="theme-toggle" id="themeToggle">🌞</div>
-        </div>
-    </header>
-
-    <div class="main-content forum">
-        <h1>Forum VapeClub</h1>
-
-        <form id="newTopicForm">
-            <input type="text" id="topicTitle" placeholder="Tytuł wątku" required>
-            <textarea id="topicContent" placeholder="Treść wątku" required></textarea>
-            <button type="submit">Dodaj Wątek</button>
-        </form>
-
-        <div id="topicsContainer"></div>
+  <section class="forum">
+    <h1>Forum VapeClub</h1>
+    <p>Witaj na forum! Możesz tutaj zadawać pytania, dzielić się doświadczeniami i rozmawiać z innymi użytkownikami.</p>
+    
+    <!-- Miejsce na posty -->
+    <div class="post">
+      <h2>Nowy post</h2>
+      <form>
+        <input type="text" placeholder="Tytuł" required>
+        <textarea placeholder="Treść posta..." required></textarea>
+        <button type="submit">Opublikuj</button>
+      </form>
     </div>
-
-    <footer>
-        <p>VapeClub Team 2025</p>
-    </footer>
-
-    <!-- Modal logowania -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <h2>Logowanie</h2>
-            <input type="text" placeholder="Login">
-            <input type="password" placeholder="Hasło">
-            <button>Zaloguj się</button>
-        </div>
+    
+    <div class="posts-list">
+      <h3>Ostatnie posty</h3>
+      <!-- Lista postów -->
+      <div class="post-item">
+        <h4>Post 1</h4>
+        <p>Treść postu...</p>
+      </div>
+      <div class="post-item">
+        <h4>Post 2</h4>
+        <p>Treść postu...</p>
+      </div>
     </div>
+  </section>
 
-    <script src="script.js"></script>
+  <footer>
+    <p>&copy; 2025 VapeClub</p>
+  </footer>
 </body>
 </html>
