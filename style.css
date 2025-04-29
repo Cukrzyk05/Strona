@@ -1,85 +1,122 @@
-/* Ogólny wygląd strony */
+/* Resetowanie stylów */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Styl główny */
 body {
     font-family: 'Arial', sans-serif;
     background-color: #121212;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-  }
-  
-  header {
-    background-color: #1f1f1f;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  header h1 {
-    font-size: 2em;
-    margin: 0;
-  }
-  
-  nav {
-    margin-top: 10px;
-  }
-  
-  nav a {
-    color: #f1f1f1;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-  }
-  
-  nav a:hover {
-    color: #00b0ff;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  #ad-list {
+    color: #e1e1e1;
+}
+
+/* Nagłówek */
+header {
     display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-  }
-  
-  .ad-item {
-    background-color: #2c2c2c;
-    padding: 15px;
-    border-radius: 8px;
-    width: 300px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .ad-item h3 {
-    font-size: 1.5em;
-    margin: 0;
-  }
-  
-  .ad-item p {
-    font-size: 1em;
-  }
-  
-  button.button {
-    background-color: #00b0ff;
-    color: white;
-    border: none;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #1a1a1a;
+    border-bottom: 2px solid #333;
+}
+
+header .logo h1 {
+    font-size: 2rem;
+    color: #e1e1e1;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+}
+
+header nav ul li {
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #e1e1e1;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+header nav ul li a:hover {
+    color: #ff9900;
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #1f1f1f;
+    margin-bottom: 40px;
+}
+
+.banner h2 {
+    font-size: 3rem;
+    color: #ff9900;
+}
+
+.banner p {
+    font-size: 1.2rem;
+    color: #d1d1d1;
+}
+
+/* Search Section */
+.search {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+#search-bar {
+    width: 60%;
     padding: 10px;
+    font-size: 1rem;
+    margin-right: 10px;
+    border: 1px solid #333;
+    border-radius: 5px;
+    background-color: #222;
+    color: #e1e1e1;
+}
+
+#search-btn {
+    padding: 10px 20px;
+    background-color: #ff9900;
+    color: #fff;
+    border: none;
     border-radius: 5px;
     cursor: pointer;
-  }
-  
-  button.button:hover {
-    background-color: #0098d7;
-  }
-  
-  footer {
-    background-color: #1f1f1f;
-    color: #f1f1f1;
+}
+
+#search-btn:hover {
+    background-color: #cc7a00;
+}
+
+/* Random Ad Section */
+.random-ad {
+    padding: 30px;
+    background-color: #333;
+    margin: 0 20px;
+    border-radius: 5px;
+}
+
+.random-ad h3 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.random-ad #ad-content {
+    font-size: 1.2rem;
+}
+
+/* Footer */
+footer {
     text-align: center;
-    padding: 10px;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-  }
-  
+    padding: 20px;
+    background-color: #1a1a1a;
+    color: #d1d1d1;
+    margin-top: 40px;
+}
