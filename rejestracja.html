@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Rejestracja - VapeClub</title>
+  <title>Rejestracja / Logowanie - VapeClub</title>
   <style>
     * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+      margin: 0; padding: 0; box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
     body {
@@ -22,82 +20,98 @@
       padding: 15px 0;
     }
     .container {
-      width: 90%;
-      max-width: 1200px;
+      width: 90%; max-width: 1200px;
       margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      display: flex; justify-content: space-between; align-items: center;
     }
     .logo {
-      font-size: 24px;
-      font-weight: bold;
-      color: #2c3e50;
-      text-decoration: none;
+      font-size: 24px; font-weight: bold;
+      color: #2c3e50; text-decoration: none;
       transition: color 0.3s;
     }
-    .logo:hover {
-      color: #3498db;
-    }
+    .logo:hover { color: #3498db; }
     nav ul {
-      display: flex;
-      list-style: none;
+      display: flex; list-style: none;
     }
-    nav ul li {
-      margin-left: 20px;
-    }
+    nav ul li { margin-left: 20px; }
     nav ul li a {
-      text-decoration: none;
-      color: #333;
-      font-weight: 500;
-      padding: 5px 10px;
-      border-radius: 4px;
-      transition: all 0.3s;
+      text-decoration: none; color: #333; font-weight: 500;
+      padding: 5px 10px; border-radius: 4px; transition: all 0.3s;
     }
     nav ul li a:hover {
-      background-color: #f0f0f0;
-      color: #3498db;
+      background-color: #f0f0f0; color: #3498db;
     }
     .search-container {
-      display: flex;
-      align-items: center;
+      display: flex; align-items: center;
     }
     .search-input {
-      padding: 8px 15px;
-      border: 1px solid #ddd;
-      border-radius: 20px;
-      outline: none;
-      width: 200px;
+      padding: 8px 15px; border: 1px solid #ddd;
+      border-radius: 20px; outline: none; width: 200px;
       transition: width 0.3s;
     }
     .search-input:focus {
-      width: 250px;
-      border-color: #3498db;
+      width: 250px; border-color: #3498db;
     }
     .search-button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 8px;
-      margin-left: -35px;
-      color: #777;
+      background: none; border: none; cursor: pointer;
+      padding: 8px; margin-left: -35px; color: #777;
+      transition: color 0.3s;
     }
-    .main-content {
-      padding: 50px 0;
+    .search-button:hover { color: #333; }
+
+    /* nowa sekcja z dwoma formularzami */
+    .auth-container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      padding: 60px 0;
+      flex-wrap: wrap;
+    }
+    .auth-box {
+      background: white;
+      padding: 30px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      width: 320px;
+    }
+    .auth-box h2 {
+      margin-bottom: 20px;
+      color: #2c3e50;
       text-align: center;
     }
+    .auth-box input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+    }
+    .auth-box button {
+      width: 100%;
+      padding: 10px;
+      background-color: #3498db;
+      border: none;
+      color: white;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .auth-box button:hover {
+      background-color: #2980b9;
+    }
+
     footer {
       background-color: #2c3e50;
       color: white;
       text-align: center;
       padding: 20px 0;
       position: fixed;
-      bottom: 0;
-      width: 100%;
+      bottom: 0; width: 100%;
     }
   </style>
 </head>
 <body>
+
   <header>
     <div class="container">
       <a href="index.html" class="logo">VapeClub</a>
@@ -119,16 +133,27 @@
     </div>
   </header>
 
-  <div class="main-content">
-    <h1>Rejestracja</h1>
-    <p>Utwórz nowe konto, aby korzystać z pełnej funkcjonalności witryny.</p>
-    <form>
-      <input type="text" placeholder="Nazwa użytkownika" required><br><br>
-      <input type="email" placeholder="Adres e-mail" required><br><br>
-      <input type="password" placeholder="Hasło" required><br><br>
-      <input type="password" placeholder="Potwierdź hasło" required><br><br>
-      <button type="submit">Zarejestruj się</button>
-    </form>
+  <div class="auth-container">
+    <!-- kolumna logowania -->
+    <div class="auth-box">
+      <h2>Logowanie</h2>
+      <form id="loginForm">
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Hasło" required>
+        <button type="submit">Zaloguj się</button>
+      </form>
+    </div>
+    <!-- kolumna rejestracji -->
+    <div class="auth-box">
+      <h2>Rejestracja</h2>
+      <form id="registerForm">
+        <input type="text" placeholder="Nazwa użytkownika" required>
+        <input type="email" placeholder="Adres e-mail" required>
+        <input type="password" placeholder="Hasło" required>
+        <input type="password" placeholder="Potwierdź hasło" required>
+        <button type="submit">Zarejestruj się</button>
+      </form>
+    </div>
   </div>
 
   <footer>
@@ -136,16 +161,23 @@
   </footer>
 
   <script>
+    // obsługa wyszukiwarki
     document.querySelector('.search-button').addEventListener('click', function() {
-      const searchTerm = document.querySelector('.search-input').value;
-      if (searchTerm.trim() !== '') {
-        alert('Wyszukiwanie: ' + searchTerm);
-      }
+      const term = document.querySelector('.search-input').value;
+      if (term.trim()) alert('Wyszukiwanie: ' + term);
     });
     document.querySelector('.search-input').addEventListener('keypress', function(e) {
-      if (e.key === 'Enter') {
-        document.querySelector('.search-button').click();
-      }
+      if (e.key === 'Enter') document.querySelector('.search-button').click();
+    });
+
+    // (opcjonalnie) obsługa submitów
+    document.getElementById('loginForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Zalogowano: ' + this.querySelector('input[type="email"]').value);
+    });
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Zarejestrowano: ' + this.querySelector('input[type="email"]').value);
     });
   </script>
 </body>
