@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html lang="pl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VapeClub - Rejestracja</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rejestracja - VapeClub</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="main-content">
-        <h1>Załóż konto</h1>
-        <form class="register-form">
-            <input type="text" placeholder="Nazwa użytkownika" required>
-            <input type="email" placeholder="Email" required>
-            <input type="password" placeholder="Hasło" required>
-            <button type="submit">Zarejestruj się</button>
-        </form>
-    </div>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Strona Główna</a></li>
+        <li><a href="sklep.html">Sklep</a></li>
+        <li><a href="aplikacja.html">Aplikacja</a></li>
+        <li><a href="premium.html">Premium</a></li>
+        <li><a href="kontakt.html">Kontakt</a></li>
+        <li><a href="forum.html">Forum</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="registration">
+    <h1>Rejestracja</h1>
+    <p>Utwórz nowe konto, aby korzystać z pełnej funkcjonalności witryny.</p>
+    
+    <form action="login.html" method="POST">
+      <label for="username">Nazwa użytkownika:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="email">Adres e-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="password">Hasło:</label>
+      <input type="password" id="password" name="password" required>
+
+      <label for="confirm-password">Potwierdź hasło:</label>
+      <input type="password" id="confirm-password" name="confirm-password" required>
+
+      <button type="submit">Zarejestruj się</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 VapeClub</p>
+  </footer>
 </body>
 </html>
