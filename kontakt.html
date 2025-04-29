@@ -2,36 +2,150 @@
 <html lang="pl">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Kontakt - VapeClub</title>
-  <link rel="stylesheet" href="style.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background-color: white;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      padding: 15px 0;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .logo {
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e50;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .logo:hover {
+      color: #3498db;
+    }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
+    nav ul li {
+      margin-left: 20px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: all 0.3s;
+    }
+    nav ul li a:hover {
+      background-color: #f0f0f0;
+      color: #3498db;
+    }
+    .search-container {
+      display: flex;
+      align-items: center;
+    }
+    .search-input {
+      padding: 8px 15px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      outline: none;
+      width: 200px;
+      transition: width 0.3s;
+    }
+    .search-input:focus {
+      width: 250px;
+      border-color: #3498db;
+    }
+    .search-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      margin-left: -35px;
+      color: #777;
+    }
+    .main-content {
+      padding: 50px 0;
+      text-align: center;
+    }
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+    }
+  </style>
 </head>
 <body>
   <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Strona Główna</a></li>
-        <li><a href="sklep.html">Sklep</a></li>
-        <li><a href="aplikacja.html">Aplikacja</a></li>
-        <li><a href="premium.html">Premium</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
-      </ul>
-    </nav>
+    <div class="container">
+      <a href="index.html" class="logo">VapeClub</a>
+      <nav>
+        <ul>
+          <li><a href="index.html">Form</a></li>
+          <li><a href="sklep.html">Sklep</a></li>
+          <li><a href="aplikacja.html">Aplikacja</a></li>
+          <li><a href="premium.html">Premium</a></li>
+          <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="forum.html">Forum</a></li>
+          <li><a href="rejestracja.html">Rejestracja</a></li>
+        </ul>
+      </nav>
+      <div class="search-container">
+        <input type="text" class="search-input" placeholder="Wyszukaj...">
+        <button class="search-button">🔍</button>
+      </div>
+    </div>
   </header>
 
-  <section class="contact">
-    <h1>Kontakt z nami</h1>
-    <p>Masz pytania? Skontaktuj się z nami za pomocą formularza lub e-maila.</p>
+  <div class="main-content">
+    <h1>Kontakt</h1>
+    <p>Masz pytania? Skontaktuj się z nami:</p>
     <form>
-      <input type="text" placeholder="Imię" required>
-      <input type="email" placeholder="E-mail" required>
-      <textarea placeholder="Wiadomość" required></textarea>
+      <input type="text" placeholder="Imię" required><br><br>
+      <input type="email" placeholder="E-mail" required><br><br>
+      <textarea placeholder="Wiadomość" required></textarea><br><br>
       <button type="submit">Wyślij</button>
     </form>
-  </section>
+  </div>
 
   <footer>
-    <p>&copy; 2025 VapeClub</p>
+    <p>VapeClub Team 2025</p>
   </footer>
+
+  <script>
+    document.querySelector('.search-button').addEventListener('click', function() {
+      const searchTerm = document.querySelector('.search-input').value;
+      if (searchTerm.trim() !== '') {
+        alert('Wyszukiwanie: ' + searchTerm);
+      }
+    });
+    document.querySelector('.search-input').addEventListener('keypress', function(e) {
+      if (e.key === 'Enter') {
+        document.querySelector('.search-button').click();
+      }
+    });
+  </script>
 </body>
 </html>
