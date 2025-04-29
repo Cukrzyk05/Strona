@@ -1,0 +1,26 @@
+{
+  "name": "strona",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": [
+    "vape",
+    "ogłoszenia",
+    "forum",
+    "vapeclub"
+  ],
+  "author": "",
+  "license": "ISC",
+  "description": "Strona z ogłoszeniami i funkcjonalnościami do zarządzania produktami związanymi z vape",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "express": "^4.21.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
