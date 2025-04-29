@@ -3,52 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VapeClub - Strona główna</title>
-    <link rel="stylesheet" href="style.css">
+    <title>VapeClub</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <a href="index.html" class="logo">VapeClub</a>
-
+            <div class="logo">
+                <span>VapeClub</span>
+                <button id="theme-toggle" class="theme-toggle-btn">🌙</button>
+            </div>
             <nav>
                 <ul>
+                    <li><a href="index.html">Strona Główna</a></li>
                     <li><a href="forum.html">Forum</a></li>
-                    <li><a href="#">Sklep</a></li>
-                    <li><a href="aplikacja.html">Aplikacja</a></li>
-                    <li><a href="premium.html">Premium</a></li>
+                    <li><a href="premium.html" class="menu-item">Premium</a></li>
                     <li><a href="kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
-
-            <div class="auth-buttons">
-                <button id="loginBtn">Logowanie</button>
-                <a href="rejestracja.html">Rejestracja</a>
+            <div class="auth">
+                <button class="login-btn">Logowanie</button>
+                <button class="register-btn">Rejestracja</button>
             </div>
-
-            <div class="theme-toggle" id="themeToggle">🌞</div>
         </div>
     </header>
 
     <div class="main-content">
         <h1>Witaj w VapeClub</h1>
-        <p>Tu znajdziesz liquidy, aplikacje, forum, i używane rzeczy.</p>
+        <p>Najlepsze miejsce dla miłośników waporyzacji!</p>
     </div>
 
     <footer>
-        <p>VapeClub Team 2025</p>
+        <p>&copy; 2025 VapeClub Team</p>
     </footer>
 
-    <!-- Modal logowania -->
-    <div id="loginModal" class="modal">
-        <div class="modal-content">
-            <h2>Logowanie</h2>
-            <input type="text" placeholder="Login">
-            <input type="password" placeholder="Hasło">
-            <button>Zaloguj się</button>
-        </div>
-    </div>
-
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
