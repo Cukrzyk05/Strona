@@ -7,109 +7,146 @@
   <style>
     /* Reset i podstawowe */
     * {
-      margin: 0; padding: 0; box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
       font-family: Arial, sans-serif;
     }
     body {
-      background-color: #f5f5f5; color: #333; line-height: 1.6;
+      background-color: #f5f5f5;
+      color: #333;
+      line-height: 1.6;
     }
 
-    /* Nagłówek */
+    /* Nagłówek i nawigacja */
     header {
-      background: #fff; box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background: #fff;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
       padding: 15px 0;
     }
     .container {
-      width: 90%; max-width: 1200px;
-      margin: 0 auto; display: flex;
-      justify-content: space-between; align-items: center;
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
     .logo {
-      font-size: 24px; font-weight: bold; color: #2c3e50;
-      text-decoration: none; transition: color .3s;
+      font-size: 24px;
+      font-weight: bold;
+      color: #2c3e50;
+      text-decoration: none;
+      transition: color .3s;
     }
-    .logo:hover { color: #3498db; }
+    .logo:hover {
+      color: #3498db;
+    }
     nav ul {
-      display: flex; list-style: none;
+      display: flex;
+      list-style: none;
     }
-    nav ul li { margin-left: 20px; }
+    nav ul li {
+      margin-left: 20px;
+    }
     nav ul li a {
-      color: #333; text-decoration: none; font-weight:500;
-      padding:5px 10px; border-radius:4px; transition:all .3s;
+      color: #333;
+      text-decoration: none;
+      font-weight: 500;
+      padding: 5px 10px;
+      border-radius: 4px;
+      transition: all .3s;
     }
     nav ul li a:hover {
-      background:#f0f0f0; color:#3498db;
+      background: #f0f0f0;
+      color: #3498db;
     }
 
-    /* Wyszukiwarka i button */
+    /* Wyszukiwarka */
     .search-container {
-      display: flex; align-items: center;
+      display: flex;
+      align-items: center;
     }
     .search-input {
-      padding:8px 15px; border:1px solid #ddd;
-      border-radius:20px; outline:none; width:200px;
+      padding: 8px 15px;
+      border: 1px solid #ddd;
+      border-radius: 20px;
+      outline: none;
+      width: 200px;
       transition: width .3s;
     }
     .search-input:focus {
-      width:250px; border-color:#3498db;
+      width: 250px;
+      border-color: #3498db;
     }
-    .search-button, .login-button {
-      background:none; border:none; cursor:pointer;
-      padding:8px 12px; margin-left:10px;
-      color:#333; border-radius:4px;
-      transition: background .3s;
+    .search-button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      padding: 8px;
+      margin-left: -35px;
+      color: #777;
+      transition: color .3s;
     }
-    .search-button:hover, .login-button:hover {
-      background:#f0f0f0; color:#3498db;
+    .search-button:hover {
+      color: #333;
     }
 
     /* Główna zawartość profilu */
     .main-content {
-      padding:50px 0; text-align:center;
+      padding: 50px 0;
+      text-align: center;
     }
-    .page-header {
-      display:flex; align-items:center;
-      justify-content:center; gap:10px;
-      margin-bottom:20px;
-    }
-    .page-icon { width:32px; height:32px; }
-
-    /* Karta profilu */
     .profile-card {
-      background:#fff; padding:30px; margin:0 auto;
-      max-width:400px; border-radius:6px;
-      box-shadow:0 2px 6px rgba(0,0,0,0.1);
-      text-align:center;
+      background: #fff;
+      padding: 30px;
+      margin: 0 auto;
+      max-width: 400px;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
     }
     .profile-card img {
-      width:120px; height:120px;
-      border-radius:50%; object-fit:cover;
-      margin-bottom:20px; background:#eee;
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+      background: #eee;
     }
     .profile-card input[type="file"] {
-      margin-bottom:15px;
+      margin-bottom: 15px;
     }
     .profile-card input,
     .profile-card textarea {
-      width:100%; padding:10px;
-      margin-bottom:15px; border:1px solid #ddd;
-      border-radius:4px;
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
     }
     .profile-card button {
-      width:100%; padding:10px;
-      background:#3498db; border:none;
-      color:#fff; border-radius:4px;
-      cursor:pointer;
+      width: 100%;
+      padding: 10px;
+      background: #3498db;
+      border: none;
+      color: #fff;
+      border-radius: 4px;
+      cursor: pointer;
     }
     .profile-card button:hover {
-      background:#2980b9;
+      background: #2980b9;
     }
 
     /* Stopka */
     footer {
-      background: #2c3e50; color: #fff;
-      text-align: center; padding: 20px 0;
-      position: fixed; bottom: 0; width: 100%;
+      background: #2c3e50;
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+      position: fixed;
+      bottom: 0;
+      width: 100%;
     }
   </style>
 </head>
@@ -133,16 +170,12 @@
       <div class="search-container">
         <input type="text" class="search-input" placeholder="Wyszukaj...">
         <button class="search-button">🔍</button>
-        <button class="login-button">Logowanie / Rejestracja</button>
       </div>
     </div>
   </header>
 
   <div class="main-content">
-    <div class="page-header">
-      <img src="icons/user.svg" class="page-icon" alt="Ikona profilu">
-      <h1>Profil</h1>
-    </div>
+    <h1>Profil</h1>
     <div class="profile-card">
       <h2>Twój Profil</h2>
       <img id="avatarPreview" src="" alt="Avatar">
@@ -160,22 +193,25 @@
   </footer>
 
   <script>
-    // Wyszukiwarka
-    document.querySelector('.search-button').addEventListener('click', function() {
+    // Wymuś logowanie
+    (function(){
+      if (localStorage.getItem('vape_loggedIn') !== 'true') {
+        localStorage.setItem('redirectAfterLogin', window.location.pathname);
+        window.location.href = 'rejestracja.html';
+      }
+    })();
+
+    // Obsługa wyszukiwarki
+    document.querySelector('.search-button').addEventListener('click', function(){
       var term = document.querySelector('.search-input').value;
       if (term.trim()) alert('Wyszukiwanie: ' + term);
     });
-    document.querySelector('.search-input').addEventListener('keypress', function(e) {
+    document.querySelector('.search-input').addEventListener('keypress', function(e){
       if (e.key === 'Enter') document.querySelector('.search-button').click();
     });
 
-    // Przycisk logowania
-    document.querySelector('.login-button').addEventListener('click', function() {
-      window.location.href = 'rejestracja.html';
-    });
-
     // Załaduj zapisany profil
-    window.addEventListener('load', function() {
+    window.addEventListener('load', function(){
       var avatar = localStorage.getItem('vape_avatar');
       if (avatar) document.getElementById('avatarPreview').src = avatar;
       var bio = localStorage.getItem('vape_bio');
@@ -186,8 +222,8 @@
       if (email) document.getElementById('newEmail').value = email;
     });
 
-    // Upload i zapis profilu
-    document.getElementById('avatarInput').addEventListener('change', function(e) {
+    // Obsługa uploadu i zapisu profilu
+    document.getElementById('avatarInput').addEventListener('change', function(e){
       var file = e.target.files[0];
       if (!file) return;
       var reader = new FileReader();
@@ -196,7 +232,7 @@
       };
       reader.readAsDataURL(file);
     });
-    document.getElementById('saveAvatar').addEventListener('click', function() {
+    document.getElementById('saveAvatar').addEventListener('click', function(){
       localStorage.setItem('vape_avatar', document.getElementById('avatarPreview').src);
       localStorage.setItem('vape_bio', document.getElementById('bio').value);
       localStorage.setItem('vape_age', document.getElementById('age').value);
@@ -205,6 +241,5 @@
       alert('Profil zaktualizowany!');
     });
   </script>
-
 </body>
 </html>
